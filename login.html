@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Login – MindRecruiting</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – MindRecruiting</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="auth-page">
 
-<div class="auth-wrapper">
-  <div class="auth-card">
-    <h1>Login</h1>
-    <p class="auth-sub">Use your work email and password.</p>
+  <div class="auth-wrapper">
+    <div class="auth-card">
 
-    <form id="login-form">
+      <h1>Login</h1>
+      <p class="auth-sub">Use your work email and password.</p>
 
-      <div class="field">
-        <label for="login-email">Work Email</label>
-        <input type="email" id="login-email" required />
-      </div>
+      <form id="login-form">
 
-      <div class="field">
-        <label for="login-password">Password</label>
-        <input type="password" id="login-password" required />
-      </div>
+        <div class="field">
+          <label for="login-email">Work Email</label>
+          <input type="email" id="login-email" required />
+        </div>
 
-      <div id="login-error" class="form-error"></div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
 
-      <button type="submit" class="btn-ai full primary-ai">
-        Login
-      </button>
-    </form>
+        <div id="login-error" class="form-error"></div>
 
-    <p class="auth-footer-text">
-      New here?
-      <a href="register.html">Create an account</a>
-    </p>
+        <button type="submit" class="btn-ai primary-ai full">
+          Login
+        </button>
 
+      </form>
+
+      <p class="auth-footer-text">
+        New here?
+        <a href="register.html">Create an account</a>
+      </p>
+
+    </div>
   </div>
-</div>
 
-<script src="login.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
