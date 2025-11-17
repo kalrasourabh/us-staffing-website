@@ -1,41 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login – MindRecruiting</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="page-light auth-page">
-  <main class="auth-wrapper">
-    <div class="auth-card">
-      <h1>Login to MindRecruiting</h1>
-      <p class="auth-sub">
-        Use the work email and password you registered with.
-      </p>
+// ===== LOGIN (FINAL WORKING VERSION) =====
+function handleLogin(e) {
+  e.preventDefault();
 
-      <form id="login-form" onsubmit="handleLogin(event)">
-        <div class="field">
-          <label for="login-email">Work email</label>
-          <input id="login-email" type="email" required placeholder="you@company.com" />
-        </div>
+  const email = document.getElementById("login-email").value.trim();
+  const password = document.getElementById("login-password").value.trim();
+  const err = document.getElementById("login-error");
 
-        <div class="field">
-          <label for="login-password">Password</label>
-          <input id="login-password" type="password" required placeholder="Password" />
-        </div>
+  if (err) err.textContent = "";
 
-        <button type="submit" class="btn btn-primary full">Login</button>
-        <p id="login-error" class="form-error"></p>
-      </form>
+  // Reject personal domains
+  if (!isProfessionalEmail(email)) {
+    err.textContent = "Please login using a company/work email only.";
+    return;
+  }
 
-      <p class="auth-footer-text">
-        New here?
-        <a href="register.html">Create a free account</a>
-      </p>
-    </div>
-  </main>
+  // Check user exists
+  const user = findUser(email);
+  if (!user) {
+    err.textContent = "This email is not registered.";
+    return;
+  }
 
-  <script src="script.js"></script>
-</body>
-</html>
+  // Password match check
+  if (user.password !== password) {
+    err.textContent = "Incorrect password.";
+    return;
+  }
+
+  // Save logged-in session
+  sessionStorage.setItem(SESSION_KEY, email);
+
+  // Redirect to dashboard
+  window.location.href = "dashboard.html";
+}
