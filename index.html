@@ -3,174 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mindlance | US Staffing Solutions</title>
+  <title>MindRecruiting – Helping Recruiters Perform Better Every Single Day</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Mindlance Staffing</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#jobs">Open Roles</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">MindRecruiting</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#login-section" class="btn nav-btn">Login</a>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Your US Staffing Partner for MSP & Enterprise Programs</h1>
-      <p>
-        End‑to‑end recruitment support across IT, Professional, and Engineering roles
-        for Fortune 500 and mid‑market clients.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn primary">Hire Talent</a>
-        <a href="#jobs" class="btn secondary">Find Jobs</a>
-      </div>
-      <p class="hero-sub">
-        Specialised in MSP programs – Fieldglass, VNDLY, Beeline & more.
-      </p>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="section-inner">
-      <h2>About Us</h2>
-      <p>
-        We help US‑based organisations scale their contingent workforce with quality,
-        speed, and compliance. From requirement intake to onboarding and post‑placement
-        care, we manage the complete lifecycle so you can focus on your core business.
-      </p>
-      <div class="grid-2">
-        <div class="card">
-          <h3>What We Do</h3>
-          <ul>
-            <li>US staffing for contract, contract‑to‑hire and direct hire</li>
-            <li>Dedicated account management & delivery teams</li>
-            <li>MSP / VMS driven recruitment (Fieldglass, VNDLY, Beeline)</li>
-            <li>Onboarding coordination with compliance & background checks</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Core Focus Areas</h3>
-          <ul>
-            <li>Information Technology</li>
-            <li>Banking & Financial Services</li>
-            <li>Insurance & Healthcare</li>
-            <li>Manufacturing & Engineering</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="section alt">
-    <div class="section-inner">
-      <h2>Services</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Contingent Staffing</h3>
-          <p>
-            Fast turnaround for contract and contract‑to‑hire positions with
-            pre‑screened, job‑ready talent.
+  <main id="home">
+    <!-- HERO + INLINE LOGIN -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Helping Recruiters Perform Better Every Single Day.</h1>
+          <p class="hero-sub">
+            Helping recruiters fix common mistakes and grow with confidence.
+          </p>
+          <div class="hero-actions">
+            <a href="#login-section" class="btn primary">Login</a>
+            <a href="#register-section" class="btn secondary">New to MindRecruiting?</a>
+          </div>
+          <p class="hero-note">
+            Simple tools and practical guidance for real-world recruiting performance.
           </p>
         </div>
-        <div class="card">
-          <h3>MSP Program Support</h3>
-          <p>
-            Expertise working with MSP partners, SLAs, scorecards and
-            compliance‑driven hiring.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Talent Pipelining</h3>
-          <p>
-            Proactive sourcing for niche and recurring skill sets to reduce time‑to‑fill.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="clients" class="section">
-    <div class="section-inner">
-      <h2>Who We Work With</h2>
-      <p>
-        We support enterprise and mid‑market clients in partnership with leading MSPs.
-      </p>
-      <div class="tag-row">
-        <span class="tag">Fortune 500 Enterprises</span>
-        <span class="tag">Banks & Financial Institutions</span>
-        <span class="tag">Insurance Carriers</span>
-        <span class="tag">Manufacturing & Engineering Firms</span>
+        <div class="hero-card">
+          <h2>Recruiter Login</h2>
+          <p class="hero-card-sub">Sign in with your professional work email to access tools.</p>
+          <form id="inline-login-form" onsubmit="handleInlineLogin(event)">
+            <div class="field">
+              <label for="inline-email">Work Email</label>
+              <input type="email" id="inline-email" placeholder="you@company.com" required />
+            </div>
+            <div class="field">
+              <label for="inline-phone">Mobile Number (India only)</label>
+              <div class="phone-input">
+                <span class="prefix">+91</span>
+                <input type="tel" id="inline-phone" placeholder="9876543210" maxlength="10" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="inline-password">Password</label>
+              <input type="password" id="inline-password" placeholder="Enter your password" required />
+            </div>
+            <button type="submit" class="btn full primary">Login</button>
+            <p class="form-helper">
+              New here?
+              <a href="#register-section">Click here to register</a>
+            </p>
+            <p class="form-error" id="inline-login-error"></p>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="jobs" class="section alt">
-    <div class="section-inner">
-      <h2>Sample Roles We Support</h2>
-      <div class="grid-3 jobs">
-        <div class="card">
-          <h3>IT & Technology</h3>
-          <ul>
-            <li>Software Developer</li>
-            <li>Business Systems Analyst</li>
-            <li>Project / Program Manager</li>
-            <li>Data / Reporting Analyst</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Professional</h3>
-          <ul>
-            <li>Customer Service Representative</li>
-            <li>Administrative Assistant</li>
-            <li>Marketing Coordinator</li>
-            <li>HR Generalist / Recruiter</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Engineering & Others</h3>
-          <ul>
-            <li>Design Engineer</li>
-            <li>Test Engineer</li>
-            <li>Manufacturing Technician</li>
-            <li>Field Service Roles</li>
-          </ul>
-        </div>
+    <!-- LOGIN SECTION -->
+    <section id="login-section" class="section auth-section">
+      <div class="section-inner narrow">
+        <h2>Login to MindRecruiting</h2>
+        <p class="section-sub">
+          Use the company email and password you registered with. Gmail / Outlook / personal emails are not allowed.
+        </p>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="grid-2 gap">
+            <div class="field">
+              <label for="login-email">Work Email</label>
+              <input type="email" id="login-email" placeholder="you@company.com" required />
+            </div>
+            <div class="field">
+              <label for="login-phone">Mobile Number (India only)</label>
+              <div class="phone-input">
+                <span class="prefix">+91</span>
+                <input type="tel" id="login-phone" placeholder="9876543210" maxlength="10" required />
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required />
+          </div>
+          <button type="submit" class="btn primary">Login</button>
+          <p class="form-helper">
+            New to MindRecruiting?
+            <a href="#register-section">Click here to register</a>
+          </p>
+          <p class="form-error" id="login-error"></p>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section contact">
-    <div class="section-inner">
-      <h2>Contact</h2>
-      <p>
-        Share your requirements or resume, and we’ll get back to you.
-      </p>
-      <div class="grid-2">
-        <div>
-          <h3>For Clients</h3>
-          <p>
-            Email: <a href="mailto:sourabh.kalra@mindlance.com">sourabh.kalra@mindlance.com</a><br />
-            LinkedIn: <a href="https://www.linkedin.com" target="_blank">Connect on LinkedIn</a>
+    <!-- REGISTER SECTION -->
+    <section id="register-section" class="section auth-section alt">
+      <div class="section-inner narrow">
+        <h2>Create Your Recruiter Account</h2>
+        <p class="section-sub">
+          Registration is only available with a professional work email. Personal email domains (Gmail, Outlook, Yahoo, etc.) are blocked.
+        </p>
+        <form id="register-form" onsubmit="handleRegister(event)">
+          <div class="grid-2 gap">
+            <div class="field">
+              <label for="reg-name">Full Name</label>
+              <input type="text" id="reg-name" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="reg-company">Company Name</label>
+              <input type="text" id="reg-company" placeholder="Your organisation" required />
+            </div>
+          </div>
+
+          <div class="grid-2 gap">
+            <div class="field">
+              <label for="reg-email">Work Email</label>
+              <input type="email" id="reg-email" placeholder="you@company.com" required />
+            </div>
+            <div class="field">
+              <label for="reg-phone">Mobile Number (India only)</label>
+              <div class="phone-input">
+                <span class="prefix">+91</span>
+                <input type="tel" id="reg-phone" placeholder="9876543210" maxlength="10" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2 gap">
+            <div class="field">
+              <label for="reg-location">Location</label>
+              <input type="text" id="reg-location" placeholder="City, State" required />
+            </div>
+            <div class="field">
+              <label for="reg-experience">Experience (Years) <span class="optional">(optional)</span></label>
+              <input type="number" id="reg-experience" placeholder="e.g. 3" min="0" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="reg-password">Create Password</label>
+            <input type="password" id="reg-password" placeholder="Min. 6 characters" required />
+          </div>
+
+          <button type="submit" class="btn primary">Create Account</button>
+          <p class="form-helper">
+            Already registered?
+            <a href="#login-section">Login here</a>
           </p>
-        </div>
-        <div>
-          <h3>For Candidates</h3>
-          <p>
-            Email your resume with job preference and location, and our team will
-            reach out for suitable roles.
-          </p>
-        </div>
+          <p class="form-error" id="register-error"></p>
+          <p class="form-success" id="register-success"></p>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- TOOLS PREVIEW SECTION -->
+    <section id="tools" class="section">
+      <div class="section-inner">
+        <h2>MindRecruiting Tools</h2>
+        <p class="section-sub">
+          Once you log in, you’ll be able to use focused tools designed to make your recruiting life easier.
+        </p>
+        <div class="grid-3 gap tools-grid" id="tools-grid">
+          <div class="card tool-card">
+            <h3>Resume Formatting</h3>
+            <p>Guidelines, templates and before–after examples to present candidates in the best light.</p>
+          </div>
+          <div class="card tool-card">
+            <h3>Recruiter Problems</h3>
+            <p>Real-world issues (no-shows, low submittals, rejections) with simple, practical solutions.</p>
+          </div>
+          <div class="card tool-card">
+            <h3>JD → Sourcing Breakdown</h3>
+            <p>Paste a JD and get keywords, titles, locations and sourcing ideas to start searching.</p>
+          </div>
+          <div class="card tool-card">
+            <h3>Boolean & X-Ray Helper</h3>
+            <p>Structure simple boolean strings and X-ray searches to use on LinkedIn, Google and job boards.</p>
+          </div>
+          <div class="card tool-card">
+            <h3>Self-Analysis Dashboard</h3>
+            <p>Track your submittals, interviews, offers and ratios to understand your own performance.</p>
+          </div>
+          <div class="card tool-card">
+            <h3>Templates & Scripts</h3>
+            <p>Email templates, call openings and follow-up messages you can adapt to your own style.</p>
+          </div>
+        </div>
+        <p class="tools-lock-note" id="tools-lock-note">
+          🔒 Please log in to unlock full access and interactive features.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="section-inner">
+        <h2>About MindRecruiting</h2>
+        <p>
+          MindRecruiting is built to support recruiters who are serious about improving their craft.
+          The focus is on simple tools, clear thinking and repeatable daily habits, not fluff.
+        </p>
+        <p>
+          Over time, this platform will grow into a practical workspace where you can format resumes,
+          break down JDs, build boolean strings, and measure your performance without getting lost in
+          complex systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="section-inner narrow">
+        <h2>Contact</h2>
+        <p class="section-sub">
+          Have feedback or ideas for new recruiter tools? Share below.
+        </p>
+        <form id="contact-form" onsubmit="handleContact(event)">
+          <div class="field">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" rows="4" placeholder="Share your thoughts or ideas..." required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="form-success" id="contact-success"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© 2025 Mindlance Staffing | US Staffing & MSP Program Support</p>
+    <p>© <span id="year"></span> MindRecruiting. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
