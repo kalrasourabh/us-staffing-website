@@ -3,52 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create account – MindRecruiting</title>
+  <title>Create Account – MindRecruiting</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page-light auth-page">
-  <main class="auth-wrapper">
-    <div class="auth-card">
-      <h1>Create your MindRecruiting account</h1>
-      <p class="auth-sub">
-        Please use your professional work email.
-        Personal domains like Gmail / Outlook / Yahoo are blocked.
-      </p>
 
-      <form id="register-form" onsubmit="handleRegister(event)">
+<body class="auth-page">
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+
+      <h1>Create Account</h1>
+      <p class="auth-sub">Use your company/work email only.</p>
+
+      <form id="register-form">
+
         <div class="field">
-          <label for="reg-name">Full name</label>
-          <input id="reg-name" type="text" required placeholder="Your name" />
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" required />
         </div>
 
         <div class="field">
-          <label for="reg-email">Work email</label>
-          <input id="reg-email" type="email" required placeholder="you@company.com" />
+          <label for="reg-email">Work Email</label>
+          <input type="email" id="reg-email" required />
         </div>
 
         <div class="field">
           <label for="reg-password">Password</label>
-          <input id="reg-password" type="password" required placeholder="Min. 6 characters" />
+          <input type="password" id="reg-password" required />
         </div>
 
         <div class="field">
-          <label for="reg-password2">Confirm password</label>
-          <input id="reg-password2" type="password" required placeholder="Type again" />
+          <label for="reg-password2">Confirm Password</label>
+          <input type="password" id="reg-password2" required />
         </div>
 
-        <button type="submit" class="btn btn-primary full">Create account</button>
+        <div id="register-error" class="form-error"></div>
+        <div id="register-success" class="form-success"></div>
 
-        <p id="register-error" class="form-error"></p>
-        <p id="register-success" class="form-success"></p>
+        <button type="submit" class="btn-ai primary-ai full">
+          Create Account
+        </button>
+
       </form>
 
       <p class="auth-footer-text">
         Already have an account?
-        <a href="login.html">Login here</a>
+        <a href="login.html">Login</a>
       </p>
-    </div>
-  </main>
 
-  <script src="script.js"></script>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
 </body>
 </html>
