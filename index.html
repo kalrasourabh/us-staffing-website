@@ -3,57 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindRecruiting – AI Tools for Recruiters</title>
+  <title>MindRecruiting</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #0d1117;
+      font-family: system-ui, sans-serif;
+      color: #ffffff;
+    }
+
+    .top-nav {
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .top-nav a:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 2rem 6rem;
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.8rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    .hero .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.7rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #1e4fd0;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #2563eb;
+      color: #93c5fd;
+    }
+
+    .btn-outline:hover {
+      background: rgba(37, 99, 235, 0.2);
+    }
+
+    /* IMAGE */
+    .hero img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 1rem;
+      object-fit: cover;
+      filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.4));
+      animation: float 5s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+  </style>
 </head>
 
-<body class="homepage-ai">
-
-  <!-- NAVBAR -->
-  <header class="nav-ai">
-    <div class="nav-inner-ai">
-      <div class="brand-ai">MINDRECRUITING</div>
-
-      <nav class="nav-links-ai">
-        <a href="#">Home</a>
-        <a href="#">Why</a>
-        <a href="#">Tools</a>
-      </nav>
-
-      <div class="nav-actions-ai">
-        <a href="login.html" class="btn-ai small primary-ai">Login</a>
-      </div>
+<body>
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <div class="brand">MINDRECRUITING</div>
+    <div>
+      <a href="login.html">Login</a>
+      <a href="register.html" style="margin-left:8px;">Create Account</a>
     </div>
-  </header>
+  </div>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-text">
       <h1>Supercharge Your<br>Recruiting With AI.</h1>
 
-      <p class="hero-sub">
-        MindRecruiting gives you sourcing logic, resume formatting,
+      <p>
+        MindRecruiting gives you sourcing logic, resume formatting,<br>
         keyword patterns & recruiter insights instantly.
       </p>
 
-      <p class="hero-tagline">
+      <p style="color:#60a5fa; font-size:1.1rem; margin-top:10px;">
         AI That Helps Recruiters Win Daily.
       </p>
 
-      <div class="hero-buttons">
-        <a href="login.html" class="btn-primary-lg">Login</a>
-        <a href="register.html" class="btn-outline-lg">Create Account</a>
+      <div class="buttons">
+        <a href="login.html">
+          <button class="btn btn-primary">Login</button>
+        </a>
+
+        <a href="register.html">
+          <button class="btn btn-outline">Create Account</button>
+        </a>
       </div>
     </div>
 
-    <!-- AI Image (Guaranteed to work) -->
     <div class="hero-image">
       <img 
-        src="https://cdn.pixabay.com/photo/2023/02/08/16/42/ai-7777328_1280.png"
+        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
         alt="AI Recruiting"
       />
     </div>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
