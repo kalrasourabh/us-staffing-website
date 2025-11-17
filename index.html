@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindRecruiting – Helping Recruiters Perform Better Every Single Day</title>
+  <title>MindRecruiting – Helping recruiters perform better every single day</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page-light">
+  <!-- Top bar -->
   <header class="top-nav">
     <div class="top-nav-inner">
-      <div class="brand">MindRecruiting</div>
+      <div class="brand">MINDRECRUITING</div>
       <nav class="top-links">
-        <a href="index.html">Home</a>
         <a href="#why">Why</a>
         <a href="#tools">Tools</a>
       </nav>
-      <div class="top-actions">
-        <a href="login.html" class="btn btn-ghost">Login</a>
-        <a href="register.html" class="btn btn-primary">Create free account</a>
-      </div>
     </div>
   </header>
 
@@ -26,37 +22,83 @@
     <!-- HERO -->
     <section class="hero-light">
       <div class="hero-light-inner">
+        <!-- LEFT: TEXT + LOGIN CTA -->
         <div class="hero-light-text">
           <h1>Helping recruiters perform better every single day.</h1>
           <p>
-            Practical tools and frameworks for recruiters who want to improve
-            sourcing, submission quality, and daily execution – without drama.
+            Practical tools and frameworks for recruiters who want to improve sourcing,
+            submission quality and daily execution – without drama.
           </p>
+
           <div class="hero-light-actions">
             <a href="login.html" class="btn btn-primary">Login</a>
-            <a href="register.html" class="btn btn-outline">I’m new – create account</a>
           </div>
+
           <p class="hero-note-light">
+            New here?
+            <a href="register.html">Create a free account</a>
+            to start using the tools.
+          </p>
+
+          <p class="hero-note-small">
             Built for recruiters. No job seekers, no agencies, no fluff.
           </p>
         </div>
-        <div class="hero-light-card">
-          <h2>What is MindRecruiting?</h2>
-          <p>
-            A simple workspace where you can:
-          </p>
-          <ul>
-            <li>Format resumes consistently</li>
-            <li>Break down JDs into sourcing plans</li>
-            <li>Get boolean ideas and recruiter templates</li>
-            <li>Track your own performance week over week</li>
-          </ul>
-          <p class="hero-card-footer">
-            You control the data – we help you make sense of it.
-          </p>
+
+        <!-- RIGHT: REAL WORKPLACE IMAGE -->
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=80"
+            alt="Recruiters working in an office"
+          />
         </div>
       </div>
     </section>
 
     <!-- WHY -->
-    <section id="why"
+    <section id="why" class="section-light">
+      <div class="section-inner">
+        <h2>Why MindRecruiting exists</h2>
+        <p>
+          Most tools are built for managers, not recruiters. MindRecruiting is focused on the
+          day-to-day – JDs, sourcing, resumes, follow-ups and performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOOLS PREVIEW -->
+    <section id="tools" class="section-light section-muted">
+      <div class="section-inner">
+        <h2>What you’ll find inside</h2>
+        <div class="tool-preview-grid">
+          <div class="card-light">
+            <h3>Resume formatting</h3>
+            <p>Turn messy profiles into clean, consistent submissions.</p>
+          </div>
+          <div class="card-light">
+            <h3>JD → sourcing breakdown</h3>
+            <p>Convert JDs into titles, keywords, locations & competitor lists.</p>
+          </div>
+          <div class="card-light">
+            <h3>Boolean helper</h3>
+            <p>Simple patterns for LinkedIn, Google & job boards.</p>
+          </div>
+          <div class="card-light">
+            <h3>Recruiter problems</h3>
+            <p>No-shows, rejections, low response – with practical ideas to try.</p>
+          </div>
+        </div>
+        <p class="section-footnote">
+          To use these tools, <a href="register.html">create your free account</a> and then login.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-light">
+    <p>© <span id="year"></span> MindRecruiting. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
