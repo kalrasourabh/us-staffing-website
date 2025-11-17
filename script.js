@@ -1,3 +1,47 @@
+// PANEL SWITCHING
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    
+    document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    
+    let target = btn.dataset.target;
+
+    document.querySelectorAll(".panel").forEach(p =>
+      p.classList.remove("active")
+    );
+
+    document.getElementById(target).classList.add("active");
+  });
+});
+
+// PLACEHOLDER FUNCTIONS
+function generateBoolean() {
+  document.getElementById("bool-output").innerText =
+    "Boolean Output will appear here.\n(We will fill logic next.)";
+}
+
+function formatResume() {
+  document.getElementById("resume-output").innerText =
+    "Formatted resume will appear here.\n(We will fill logic next.)";
+}
+
+function downloadTXT() {
+  alert("TXT Download coming next.");
+}
+
+function downloadDOCX() {
+  alert("Word Download coming next.");
+}
+
+function downloadPDF() {
+  alert("PDF Download coming next.");
+}
+
+function logoutUser() {
+  sessionStorage.clear();
+  window.location.href = "login.html";
+}
 // ===== BASIC STUFF =====
 const FREE_DOMAINS = [
   "gmail.com",
