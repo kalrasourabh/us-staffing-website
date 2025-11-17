@@ -6,252 +6,57 @@
   <title>MindRecruiting – Helping Recruiters Perform Better Every Single Day</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="navbar">
-    <div class="nav-inner">
-      <div class="logo">MindRecruiting</div>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
+<body class="page-light">
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <div class="brand">MindRecruiting</div>
+      <nav class="top-links">
+        <a href="index.html">Home</a>
+        <a href="#why">Why</a>
         <a href="#tools">Tools</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
       </nav>
-      <div class="nav-actions">
-        <a href="#login-section" class="btn nav-btn">Login</a>
+      <div class="top-actions">
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <a href="register.html" class="btn btn-primary">Create free account</a>
       </div>
     </div>
   </header>
 
-  <main id="home">
-    <!-- HERO + INLINE LOGIN -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h1>Helping Recruiters Perform Better Every Single Day.</h1>
-          <p class="hero-sub">
-            Helping recruiters fix common mistakes and grow with confidence.
+  <main>
+    <!-- HERO -->
+    <section class="hero-light">
+      <div class="hero-light-inner">
+        <div class="hero-light-text">
+          <h1>Helping recruiters perform better every single day.</h1>
+          <p>
+            Practical tools and frameworks for recruiters who want to improve
+            sourcing, submission quality, and daily execution – without drama.
           </p>
-          <div class="hero-actions">
-            <a href="#login-section" class="btn primary">Login</a>
-            <a href="#register-section" class="btn secondary">New to MindRecruiting?</a>
+          <div class="hero-light-actions">
+            <a href="login.html" class="btn btn-primary">Login</a>
+            <a href="register.html" class="btn btn-outline">I’m new – create account</a>
           </div>
-          <p class="hero-note">
-            Simple tools and practical guidance for real-world recruiting performance.
+          <p class="hero-note-light">
+            Built for recruiters. No job seekers, no agencies, no fluff.
           </p>
         </div>
-
-        <div class="hero-card">
-          <h2>Recruiter Login</h2>
-          <p class="hero-card-sub">Sign in with your professional work email to access tools.</p>
-          <form id="inline-login-form" onsubmit="handleInlineLogin(event)">
-            <div class="field">
-              <label for="inline-email">Work Email</label>
-              <input type="email" id="inline-email" placeholder="you@company.com" required />
-            </div>
-            <div class="field">
-              <label for="inline-phone">Mobile Number (India only)</label>
-              <div class="phone-input">
-                <span class="prefix">+91</span>
-                <input type="tel" id="inline-phone" placeholder="9876543210" maxlength="10" required />
-              </div>
-            </div>
-            <div class="field">
-              <label for="inline-password">Password</label>
-              <input type="password" id="inline-password" placeholder="Enter your password" required />
-            </div>
-            <button type="submit" class="btn full primary">Login</button>
-            <p class="form-helper">
-              New here?
-              <a href="#register-section">Click here to register</a>
-            </p>
-            <p class="form-error" id="inline-login-error"></p>
-          </form>
+        <div class="hero-light-card">
+          <h2>What is MindRecruiting?</h2>
+          <p>
+            A simple workspace where you can:
+          </p>
+          <ul>
+            <li>Format resumes consistently</li>
+            <li>Break down JDs into sourcing plans</li>
+            <li>Get boolean ideas and recruiter templates</li>
+            <li>Track your own performance week over week</li>
+          </ul>
+          <p class="hero-card-footer">
+            You control the data – we help you make sense of it.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- LOGIN SECTION -->
-    <section id="login-section" class="section auth-section">
-      <div class="section-inner narrow">
-        <h2>Login to MindRecruiting</h2>
-        <p class="section-sub">
-          Use the company email and password you registered with. Gmail / Outlook / personal emails are not allowed.
-        </p>
-        <form id="login-form" onsubmit="handleLogin(event)">
-          <div class="grid-2 gap">
-            <div class="field">
-              <label for="login-email">Work Email</label>
-              <input type="email" id="login-email" placeholder="you@company.com" required />
-            </div>
-            <div class="field">
-              <label for="login-phone">Mobile Number (India only)</label>
-              <div class="phone-input">
-                <span class="prefix">+91</span>
-                <input type="tel" id="login-phone" placeholder="9876543210" maxlength="10" required />
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password" placeholder="Enter your password" required />
-          </div>
-          <button type="submit" class="btn primary">Login</button>
-          <p class="form-helper">
-            New to MindRecruiting?
-            <a href="#register-section">Click here to register</a>
-          </p>
-          <p class="form-error" id="login-error"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- REGISTER SECTION -->
-    <section id="register-section" class="section auth-section alt">
-      <div class="section-inner narrow">
-        <h2>Create Your Recruiter Account</h2>
-        <p class="section-sub">
-          Registration is only available with a professional work email. Personal email domains (Gmail, Outlook, Yahoo, etc.) are blocked.
-        </p>
-        <form id="register-form" onsubmit="handleRegister(event)">
-          <div class="grid-2 gap">
-            <div class="field">
-              <label for="reg-name">Full Name</label>
-              <input type="text" id="reg-name" placeholder="Your full name" required />
-            </div>
-            <div class="field">
-              <label for="reg-company">Company Name</label>
-              <input type="text" id="reg-company" placeholder="Your organisation" required />
-            </div>
-          </div>
-
-          <div class="grid-2 gap">
-            <div class="field">
-              <label for="reg-email">Work Email</label>
-              <input type="email" id="reg-email" placeholder="you@company.com" required />
-            </div>
-            <div class="field">
-              <label for="reg-phone">Mobile Number (India only)</label>
-              <div class="phone-input">
-                <span class="prefix">+91</span>
-                <input type="tel" id="reg-phone" placeholder="9876543210" maxlength="10" required />
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-2 gap">
-            <div class="field">
-              <label for="reg-location">Location</label>
-              <input type="text" id="reg-location" placeholder="City, State" required />
-            </div>
-            <div class="field">
-              <label for="reg-experience">Experience (Years) <span class="optional">(optional)</span></label>
-              <input type="number" id="reg-experience" placeholder="e.g. 3" min="0" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="reg-password">Create Password</label>
-            <input type="password" id="reg-password" placeholder="Min. 6 characters" required />
-          </div>
-
-          <button type="submit" class="btn primary">Create Account</button>
-          <p class="form-helper">
-            Already registered?
-            <a href="#login-section">Login here</a>
-          </p>
-          <p class="form-error" id="register-error"></p>
-          <p class="form-success" id="register-success"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- TOOLS PREVIEW SECTION -->
-    <section id="tools" class="section">
-      <div class="section-inner">
-        <h2>MindRecruiting Tools</h2>
-        <p class="section-sub">
-          Once you log in, you’ll be able to use focused tools designed to make your recruiting life easier.
-        </p>
-        <div class="grid-3 gap tools-grid" id="tools-grid">
-          <div class="card tool-card">
-            <h3>Resume Formatting</h3>
-            <p>Guidelines, templates and before–after examples to present candidates in the best light.</p>
-          </div>
-          <div class="card tool-card">
-            <h3>Recruiter Problems</h3>
-            <p>Real-world issues (no-shows, low submittals, rejections) with simple, practical solutions.</p>
-          </div>
-          <div class="card tool-card">
-            <h3>JD → Sourcing Breakdown</h3>
-            <p>Paste a JD and get keywords, titles, locations and sourcing ideas to start searching.</p>
-          </div>
-          <div class="card tool-card">
-            <h3>Boolean & X-Ray Helper</h3>
-            <p>Structure simple boolean strings and X-ray searches to use on LinkedIn, Google and job boards.</p>
-          </div>
-          <div class="card tool-card">
-            <h3>Self-Analysis Dashboard</h3>
-            <p>Track your submittals, interviews, offers and ratios to understand your own performance.</p>
-          </div>
-          <div class="card tool-card">
-            <h3>Templates & Scripts</h3>
-            <p>Email templates, call openings and follow-up messages you can adapt to your own style.</p>
-          </div>
-        </div>
-        <p class="tools-lock-note" id="tools-lock-note">
-          🔒 Please log in to unlock full access and interactive features.
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section alt">
-      <div class="section-inner">
-        <h2>About MindRecruiting</h2>
-        <p>
-          MindRecruiting is built to support recruiters who are serious about improving their craft.
-          The focus is on simple tools, clear thinking and repeatable daily habits, not fluff.
-        </p>
-        <p>
-          Over time, this platform will grow into a practical workspace where you can format resumes,
-          break down JDs, build boolean strings, and measure your performance without getting lost in
-          complex systems.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="section-inner narrow">
-        <h2>Contact</h2>
-        <p class="section-sub">
-          Have feedback or ideas for new recruiter tools? Share below.
-        </p>
-        <form id="contact-form" onsubmit="handleContact(event)">
-          <div class="field">
-            <label for="contact-name">Name</label>
-            <input type="text" id="contact-name" placeholder="Your name" required />
-          </div>
-          <div class="field">
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" placeholder="you@example.com" required />
-          </div>
-          <div class="field">
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" rows="4" placeholder="Share your thoughts or ideas..." required></textarea>
-          </div>
-          <button type="submit" class="btn primary">Send Message</button>
-          <p class="form-success" id="contact-success"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> MindRecruiting. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <!-- WHY -->
+    <section id="why"
