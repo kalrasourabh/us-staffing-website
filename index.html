@@ -3,102 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindRecruiting – Helping recruiters perform better every single day</title>
+  <title>MindRecruiting – Supercharge Your Recruiting With AI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page-light">
-  <!-- Top bar -->
-  <header class="top-nav">
-    <div class="top-nav-inner">
-      <div class="brand">MINDRECRUITING</div>
-      <nav class="top-links">
-        <a href="#why">Why</a>
-        <a href="#tools">Tools</a>
-      </nav>
+
+<body class="ai-page">
+
+  <!-- TOP NAV -->
+  <header class="top-nav-ai">
+    <div class="top-nav-inner-ai">
+      <div class="brand-ai">MINDRECRUITING</div>
+      <div class="nav-right-ai">
+        <a href="login.html" class="nav-btn-ai">Login</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero-light">
-      <div class="hero-light-inner">
-        <!-- LEFT: TEXT + LOGIN CTA -->
-        <div class="hero-light-text">
-          <h1>Helping recruiters perform better every single day.</h1>
-          <p>
-            Practical tools and frameworks for recruiters who want to improve sourcing,
-            submission quality and daily execution – without drama.
-          </p>
+  <!-- HERO SECTION -->
+  <div class="hero-container-ai">
 
-          <div class="hero-light-actions">
-            <a href="login.html" class="btn btn-primary">Login</a>
-          </div>
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop playsinline class="bg-video-ai">
+      <source src="https://cdn.pixabay.com/vimeo/448406514/neon-83708.mp4?width=1280" type="video/mp4" />
+    </video>
 
-          <p class="hero-note-light">
-            New here?
-            <a href="register.html">Create a free account</a>
-            to start using the tools.
-          </p>
+    <div class="hero-overlay-ai"></div>
 
-          <p class="hero-note-small">
-            Built for recruiters. No job seekers, no agencies, no fluff.
-          </p>
-        </div>
+    <!-- HERO CONTENT -->
+    <div class="hero-content-ai">
+      <h1 class="hero-title-ai">Supercharge Your Recruiting With AI.</h1>
 
-        <!-- RIGHT: REAL WORKPLACE IMAGE -->
-        <div class="hero-visual">
-          <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=80"
-            alt="Recruiters working in an office"
-          />
-        </div>
+      <p class="hero-sub-ai">
+        MindRecruiting gives you sourcing logic, resume formatting,
+        keyword patterns & recruiter insights instantly.
+      </p>
+
+      <div class="rotating-lines-ai">
+        <span id="rotateText">Tools That Make Recruiters Better.</span>
       </div>
-    </section>
 
-    <!-- WHY -->
-    <section id="why" class="section-light">
-      <div class="section-inner">
-        <h2>Why MindRecruiting exists</h2>
-        <p>
-          Most tools are built for managers, not recruiters. MindRecruiting is focused on the
-          day-to-day – JDs, sourcing, resumes, follow-ups and performance.
-        </p>
+      <div class="hero-actions-ai">
+        <a href="login.html" class="btn-ai primary-ai">Login</a>
+        <a href="register.html" class="btn-ai secondary-ai">Create Account</a>
       </div>
-    </section>
+    </div>
 
-    <!-- TOOLS PREVIEW -->
-    <section id="tools" class="section-light section-muted">
-      <div class="section-inner">
-        <h2>What you’ll find inside</h2>
-        <div class="tool-preview-grid">
-          <div class="card-light">
-            <h3>Resume formatting</h3>
-            <p>Turn messy profiles into clean, consistent submissions.</p>
-          </div>
-          <div class="card-light">
-            <h3>JD → sourcing breakdown</h3>
-            <p>Convert JDs into titles, keywords, locations & competitor lists.</p>
-          </div>
-          <div class="card-light">
-            <h3>Boolean helper</h3>
-            <p>Simple patterns for LinkedIn, Google & job boards.</p>
-          </div>
-          <div class="card-light">
-            <h3>Recruiter problems</h3>
-            <p>No-shows, rejections, low response – with practical ideas to try.</p>
-          </div>
-        </div>
-        <p class="section-footnote">
-          To use these tools, <a href="register.html">create your free account</a> and then login.
-        </p>
-      </div>
-    </section>
-  </main>
+    <!-- RIGHT SIDE AI BRAIN IMAGE -->
+    <div class="hero-visual-ai">
+      <img src="https://i.ibb.co/87HCrvJ/ai-brain-blue.png" alt="AI Brain" />
+    </div>
 
-  <footer class="footer-light">
-    <p>© <span id="year"></span> MindRecruiting. All rights reserved.</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
+  <script>
+    /* Rotating text */
+    const rotatingText = [
+      "Tools That Make Recruiters Better.",
+      "AI That Helps Recruiters Win Daily.",
+      "Smarter Sourcing. Cleaner Resumes. Better Submittals."
+    ];
+
+    let tIndex = 0;
+    setInterval(() => {
+      tIndex = (tIndex + 1) % rotatingText.length;
+      document.getElementById("rotateText").textContent = rotatingText[tIndex];
+    }, 3000);
+  </script>
+
 </body>
 </html>
