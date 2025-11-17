@@ -3,35 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindRecruiting – Supercharge Your Recruiting With AI</title>
+  <title>MindRecruiting – AI Tools for Recruiters</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="ai-page">
+<body class="homepage-ai">
 
   <!-- TOP NAV -->
-  <header class="top-nav-ai">
-    <div class="top-nav-inner-ai">
+  <header class="nav-ai">
+    <div class="nav-inner-ai">
       <div class="brand-ai">MINDRECRUITING</div>
-      <div class="nav-right-ai">
-        <a href="login.html" class="nav-btn-ai">Login</a>
+
+      <nav class="nav-links-ai">
+        <a href="index.html">Home</a>
+        <a href="#">Why</a>
+        <a href="#">Tools</a>
+      </nav>
+
+      <div class="nav-actions-ai">
+        <a href="login.html" class="btn-ai small primary-ai">Login</a>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <div class="hero-container-ai">
+  <section class="hero-container-ai">
 
-    <!-- VIDEO BACKGROUND -->
-    <video autoplay muted loop playsinline class="bg-video-ai">
-      <source src="https://cdn.pixabay.com/vimeo/448406514/neon-83708.mp4?width=1280" type="video/mp4" />
-    </video>
-
-    <div class="hero-overlay-ai"></div>
-
-    <!-- HERO CONTENT -->
     <div class="hero-content-ai">
-      <h1 class="hero-title-ai">Supercharge Your Recruiting With AI.</h1>
+      <h1 class="hero-title-ai">
+        Supercharge Your <br />
+        Recruiting With AI.
+      </h1>
 
       <p class="hero-sub-ai">
         MindRecruiting gives you sourcing logic, resume formatting,
@@ -39,7 +41,7 @@
       </p>
 
       <div class="rotating-lines-ai">
-        <span id="rotateText">Tools That Make Recruiters Better.</span>
+        AI That Helps Recruiters Win Daily.
       </div>
 
       <div class="hero-actions-ai">
@@ -48,28 +50,11 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE AI BRAIN IMAGE -->
+    <!-- AI BRAIN IMAGE -->
     <div class="hero-visual-ai">
-      <img src="https://i.ibb.co/87HCrvJ/ai-brain-blue.png" alt="AI Brain" />
+      <img src="https://i.ibb.co/h2xgF1L/ai-brain-blue-premium.png" alt="AI Brain" />
     </div>
-
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    /* Rotating text */
-    const rotatingText = [
-      "Tools That Make Recruiters Better.",
-      "AI That Helps Recruiters Win Daily.",
-      "Smarter Sourcing. Cleaner Resumes. Better Submittals."
-    ];
-
-    let tIndex = 0;
-    setInterval(() => {
-      tIndex = (tIndex + 1) % rotatingText.length;
-      document.getElementById("rotateText").textContent = rotatingText[tIndex];
-    }, 3000);
-  </script>
+  </section>
 
 </body>
 </html>
