@@ -3,60 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindRecruiting – Helping Recruiters Perform Better Every Single Day</title>
+  <title>Create account – MindRecruiting</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page-light">
-  <header class="top-nav">
-    <div class="top-nav-inner">
-      <div class="brand">MindRecruiting</div>
-      <nav class="top-links">
-        <a href="index.html">Home</a>
-        <a href="#why">Why</a>
-        <a href="#tools">Tools</a>
-      </nav>
-      <div class="top-actions">
-        <a href="login.html" class="btn btn-ghost">Login</a>
-        <a href="register.html" class="btn btn-primary">Create free account</a>
-      </div>
+<body class="page-light auth-page">
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <h1>Create your MindRecruiting account</h1>
+      <p class="auth-sub">
+        Please use your professional work email.
+        Personal domains like Gmail / Outlook / Yahoo are blocked.
+      </p>
+
+      <form id="register-form" onsubmit="handleRegister(event)">
+        <div class="field">
+          <label for="reg-name">Full name</label>
+          <input id="reg-name" type="text" required placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="reg-email">Work email</label>
+          <input id="reg-email" type="email" required placeholder="you@company.com" />
+        </div>
+
+        <div class="field">
+          <label for="reg-password">Password</label>
+          <input id="reg-password" type="password" required placeholder="Min. 6 characters" />
+        </div>
+
+        <div class="field">
+          <label for="reg-password2">Confirm password</label>
+          <input id="reg-password2" type="password" required placeholder="Type again" />
+        </div>
+
+        <button type="submit" class="btn btn-primary full">Create account</button>
+
+        <p id="register-error" class="form-error"></p>
+        <p id="register-success" class="form-success"></p>
+      </form>
+
+      <p class="auth-footer-text">
+        Already have an account?
+        <a href="login.html">Login here</a>
+      </p>
     </div>
-  </header>
+  </main>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero-light">
-      <div class="hero-light-inner">
-        <div class="hero-light-text">
-          <h1>Helping recruiters perform better every single day.</h1>
-          <p>
-            Practical tools and frameworks for recruiters who want to improve
-            sourcing, submission quality, and daily execution – without drama.
-          </p>
-          <div class="hero-light-actions">
-            <a href="login.html" class="btn btn-primary">Login</a>
-            <a href="register.html" class="btn btn-outline">I’m new – create account</a>
-          </div>
-          <p class="hero-note-light">
-            Built for recruiters. No job seekers, no agencies, no fluff.
-          </p>
-        </div>
-        <div class="hero-light-card">
-          <h2>What is MindRecruiting?</h2>
-          <p>
-            A simple workspace where you can:
-          </p>
-          <ul>
-            <li>Format resumes consistently</li>
-            <li>Break down JDs into sourcing plans</li>
-            <li>Get boolean ideas and recruiter templates</li>
-            <li>Track your own performance week over week</li>
-          </ul>
-          <p class="hero-card-footer">
-            You control the data – we help you make sense of it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section id="why"
+  <script src="script.js"></script>
+</body>
+</html>
