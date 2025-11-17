@@ -191,3 +191,92 @@ Best,
   <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard – MindRecruiting</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-dark">
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar-premium">
+    <div class="sidebar-title">MINDRECRUITING</div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" data-target="bool">String Helper</button>
+      <button class="nav-btn" data-target="resume">Resume Formatting</button>
+      <button class="nav-btn" data-target="dashboard">Recruiter Dashboard</button>
+      <button class="nav-btn" data-target="gp">GP Calculator</button>
+    </nav>
+
+    <button class="logout-btn" onclick="logoutUser()">Logout</button>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="main-panel">
+
+    <!-- BOOLEAN HELPER -->
+    <section id="bool" class="panel active glass-card">
+      <h1>String Helper / Boolean Builder</h1>
+      <p class="subtext">Enter client & JD to generate skills + boolean string automatically.</p>
+
+      <div class="form-block">
+        <label>Client Name:</label>
+        <input type="text" id="bool-client" placeholder="Example: Kohler">
+      </div>
+
+      <div class="form-block">
+        <label>Paste JD (Responsibilities Only):</label>
+        <textarea id="bool-jd" rows="6" placeholder="Paste JD responsibilities..."></textarea>
+      </div>
+
+      <button class="btn-primary-lg" onclick="generateBoolean()">Generate String</button>
+
+      <div id="bool-output" class="output-box"></div>
+    </section>
+
+    <!-- RESUME FORMATTING -->
+    <section id="resume" class="panel glass-card">
+      <h1>Resume Formatting</h1>
+      <p class="subtext">Paste notes, select role and get formatted output + download options.</p>
+
+      <div class="form-block">
+        <label>Candidate Notes:</label>
+        <textarea id="res-notes" rows="6" placeholder="Paste raw notes..."></textarea>
+      </div>
+
+      <button class="btn-primary-lg" onclick="formatResume()">Format Resume</button>
+
+      <div id="resume-output" class="output-box"></div>
+
+      <div class="download-box">
+        <button class="btn-outline-lg" onclick="downloadTXT()">Download TXT</button>
+        <button class="btn-outline-lg" onclick="downloadDOCX()">Download Word</button>
+        <button class="btn-outline-lg" onclick="downloadPDF()">Download PDF</button>
+      </div>
+    </section>
+
+    <!-- RECRUITER DASHBOARD -->
+    <section id="dashboard" class="panel glass-card center-box">
+      <h1 style="color:#60a5fa;">Recruiter Dashboard</h1>
+      <p class="coming-blink">Coming Soon...</p>
+    </section>
+
+    <!-- GP CALCULATOR -->
+    <section id="gp" class="panel glass-card center-box">
+      <h1 style="color:#90cdf4;">GP Calculator</h1>
+      <p class="coming-blink">Coming Soon...</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
